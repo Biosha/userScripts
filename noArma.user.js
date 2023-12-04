@@ -13,7 +13,8 @@
 
 (function() {
     'use strict';
-    setTimeout(() => {
+    document.getElementsByTagName("body")[0].attributes.removeNamedItem("data-theme-name")
+    document.addEventListener('mh-navigation-complete', (event) => {
         document.getElementsByTagName("body")[0].attributes.removeNamedItem("data-theme-name")
-    }, 750);
+    })
 })();
